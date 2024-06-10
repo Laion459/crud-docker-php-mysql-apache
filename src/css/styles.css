@@ -1,0 +1,857 @@
+/* Basic body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Container for content */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styles for form */
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+/* Styles for labels */
+label {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Styles for input fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Styles for submit button and button class */
+input[type="submit"],
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* Styles for add button */
+input[type="submit"].add,
+.button.add {
+    background-color: #4CAF50;
+    text-decoration: none;
+    width: 200px;
+}
+
+/* Styles for edit button */
+input[type="submit"].edit,
+.button.edit {
+    background-color: #FFC107;
+    text-decoration: none;
+    width: 60px;
+
+}
+
+/* Styles for delete button */
+.button.delete {
+    background-color: #F44336;
+    width: 140px;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:hover,
+.button:hover {
+    opacity: 0.7;
+}
+
+/* Styles for links */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Styles for table header and cells */
+th,
+td {
+    padding: 15px 25px;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-radius: 15px;
+}
+
+/* Styles for table header */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles for buttons within table cells */
+td .button {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    th,
+    td {
+        display: block;
+        width: 100%;
+        text-align: right;
+
+    }
+
+    th,
+    td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    th {
+        display: none;
+    }
+}
+
+/* Styles for message container */
+#message-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+/* Styles for message */
+#message {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Styles for success message */
+.success {
+    background-color: #4CAF50;
+}
+
+/* Styles for error message */
+.error {
+    background-color: #F44336;
+}
+
+/* Keyframe animation for slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Hide element */
+.hidden {
+    display: none;
+}
+
+/* Styles for table container */
+.table-container {
+    max-height: 700px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.fixed-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for update container */
+.update-container {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styles for heading in update container */
+.update-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styles for form in update container */
+.update-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for labels in update container */
+.update-container label {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Styles for input fields in update container */
+.update-container input[type="text"],
+.update-container input[type="email"],
+.update-container input[type="date"],
+.update-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    min-width: 280px;
+    text-align: center;
+
+}
+
+/* Styles for submit button in update container */
+.update-container input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 400px;
+    background-color: #4CAF50;
+}
+
+/* Hover effect for submit button in update container */
+.update-container input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Styles for links in update container */
+.update-container a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Hover effect for links in update container */
+.update-container a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for back button in update container */
+.update-container a.button-back {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 100px;
+    background-color: #2196F3;
+    text-decoration: none;
+}
+
+/* Hover effect for back button in update container */
+.update-container a.button-back:hover {
+    opacity: 0.9;
+}
+
+/* Styles for back button */
+a.button-back {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 100px;
+    background-color: #2196F3;
+    text-decoration: none;
+}
+
+/* Hover effect for back button */
+a.button-back:hover {
+    opacity: 0.9;
+}
+
+/* Styles for delete container */
+.delete-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles for heading in delete container */
+.delete-container h1 {
+    color: #333;
+}
+
+/* Styles for message container in delete container */
+.delete-container #message-container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styles for message in delete container */
+.delete-container #message {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Styles for message text in delete container */
+.delete-container #message-text {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Styles for confirmation and cancel buttons in message */
+.delete-container #message .button-confirm,
+.delete-container #message .button-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+/* Styles for confirmation button */
+.delete-container #message .button-confirm {
+    background-color: #4CAF50;
+}
+
+/* Styles for cancel button */
+.delete-container #message .button-cancel {
+    background-color: #F44336;
+    margin-left: 10px;
+}
+
+/* Hover effect for buttons in message */
+.delete-container #message .button-confirm:hover,
+.delete-container #message .button-cancel:hover {
+    opacity: 0.9;
+}
+
+/* Hide element in message */
+.delete-container #message .hidden {
+    display: none;
+}
+
+/* Styles for custom confirmation modal */
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    text-align: center;
+}
+
+/* Styles for heading in confirmation modal */
+.confirmation-modal h2 {
+    margin-top: 0;
+}
+
+/* Styles for buttons in confirmation modal */
+.confirmation-modal button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for OK button */
+.confirmation-modal button.ok {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Styles for Cancel button */
+.confirmation-modal button.cancel {
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Styles for container for read only view */
+.container-read {
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* Styles for heading in read only container */
+.container-read h1 {
+    text-align: center;
+}
+
+/* Styles for form in read only container */
+.container-read form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Styles for labels in read only container */
+.container-read form label {
+    margin-bottom: 5px;
+}
+
+/* Styles for input fields in read only container */
+.container-read form input[type="text"],
+.container-read form button[type="submit"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Styles for submit button in read only container */
+.container-read form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    display: block
+}
+
+/* Hover effect for submit button in read only container */
+.container-read form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styles for paragraphs in read only container */
+.container-read p {
+    margin: 5px 0;
+}
+
+/* Styles for read button */
+.button.read {
+    background-color: #2196F3;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+/* Hover effect for read button */
+.button.read:hover {
+    background-color: #1E88E5;
+}
+
+/* Alinhar botões à direita */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Espaçamento entre botões */
+.button-container .button {
+    margin-left: 10px;
+}
+
+/* Seletor para todos os botões */
+.button,
+.button-read,
+.button-edit,
+.button-delete,
+.button-back,
+input.add {
+    width: 50%;
+}
+
+/* Seletor para o contêiner */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* class buttons */
+/* Styles for Add, Back and Search buttons */
+.add,
+.button-back,
+.search {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for Add, Back and Search button icons */
+.add-icon,
+.back-icon,
+.search-icon {
+    margin-right: 5px;
+}
+
+/* Styles for Edit button icon */
+.edit-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.edit-icon svg {
+    margin-right: 5px;
+}
+
+/* Styles for Add button */
+.add {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for Add button icon */
+.add-icon {
+    margin-right: 5px;
+}
+
+/* Styles for Back button */
+.button-back {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 100px;
+    background-color: #2196F3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for Back button icon */
+.back-icon {
+    margin-right: 5px;
+}
+
+/* Styles for Search button */
+.search {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+    background-color: #4CAF50;
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for Search button icon */
+.search-icon {
+    margin-right: 5px;
+}
+
+/* Styles for Index Container */
+.index-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e2e4;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 1100px;
+}
+
+/* Styles for Update button */
+.button-update {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    min-width: 240px;
+    background-color: #50ad34;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 50%;
+}
+
+
+/* Sets the style for the div with the 'results' class */
+.results {
+    background-color: #9498fb;
+    border-radius: 15px;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0;
+    width: 150px;
+
+}
+
+/* Sets the style for the h3 element inside the 'results' div */
+.results h3 {
+    color: #e2e9e6;
+    font-size: 14px;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+
+}
+
+
+/* Styles for view button */
+input[type="submit"].button-view,
+.button.view {
+    background-color: #50ad34;
+    text-decoration: none;
+    width: 60px;
+
+}
+
+/* Container styles for the view */
+.view-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 500px;
+    box-sizing: border-box;
+
+    /* Flexbox properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+/* Styles for the employee addition form container */
+.container-create {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 500px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* Styles specific to the form within the container */
+.container-create form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styles for form elements */
+.container-create form input[type="text"],
+.container-create form input[type="email"],
+.container-create form input[type="date"],
+.container-create form select {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+}
+
+/* Styles for the form button */
+.container-create form button {
+    width: 50%;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #24a524;
+    color: #fff;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+/* Styles for form text */
+.container-create form p {
+    margin-bottom: 10px;
+}
+
+/* Styles for the "Back" button */
+.container-create .button-back {
+    background-color: #007bff; /* Blue color */
+}
+
+/* Styles for the logo */
+.logo {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px;
+}
